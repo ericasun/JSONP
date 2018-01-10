@@ -35,7 +35,7 @@ var server = http.createServer(function(request,response){
 
         /*第33节课添加的代码*/
     }else if( path === '/pay'){
-        var amount = fs.readFily('./db','utf8')
+        var amount = fs.readFileSync('./db','utf8')
         var newAmount = amount - 1
         fs.writeFileSync('./db'.newAmount)
         response.setHeader('Content-Type','application/javascript')
