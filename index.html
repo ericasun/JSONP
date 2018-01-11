@@ -32,7 +32,7 @@
             delete window[functionName]
         }
 
-        script.onerror = function(){
+        script.onerror = function(e){
             alert('fail')
             e.currentTarget.remove()
             delete window[functionName]

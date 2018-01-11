@@ -13,16 +13,11 @@ var server = http.createServer(function(request,response){
     //从这里开始看，上面不要看
 
     if(path === '/'){ //如果用户请求的是/路径
-        console.log(1);
-
-
 
         var string = fs.readFileSync('./index.html','utf8')
         /*第33节课添加的代码*/
-        var amount = fs.readFileSync("./db", "utf8")
-
-        /**注意这里要用双引号。。。。。。。。。。。。。。。。。。。。。。。。。。。。**/
-        //var amount = fs.readFileSync('./db','uft8')  //100
+        var amount = fs.readFileSync('./db', 'utf8')
+        console.log(amount);
 
         string = string.replace('&&&amount&&&',amount)
 
